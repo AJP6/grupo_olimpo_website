@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grupo Olimpo | Portfolio</title>
+  <meta name="description" content="Full portfolio of Grupo Olimpo construction and engineering projects."/>
+  <style>
+    :root{
+      --bg:#0b1021; --layer:#0c1426; --ink:#0b1220; --text:#e5e7eb; --muted:#94a3b8;
+      --brand:#06b6d4; --accent:#22c55e; --warn:#f59e0b; --ring:rgba(255,255,255,.08);
+      --shadow:0 10px 25px rgba(0,0,0,.25); --radius:18px; --rsm:12px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,#0b1021,#0c1224 60%,#0a0f1f);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:auto;padding:0 20px}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(10,15,31,.7);border-bottom:1px solid var(--ring)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo-img{height:48px;width:auto;object-fit:contain;object-position:center;padding:4px}
+    .logo h1{font-size:18px;letter-spacing:.3px;margin:0;color:#e5e7eb}
+    .menu{display:flex;gap:18px}
+    .menu a{padding:8px 10px;border-radius:10px;color:#d1d5db}
+    .menu a:hover{background:rgba(255,255,255,.06)}
+    .cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:var(--brand);color:#001018;font-weight:600}
+    .lang{padding:8px 10px;border-radius:10px;border:1px solid var(--ring);background:transparent;color:#d1d5db}
+    .burger{display:none}
+
+    section{padding:58px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:24px}
+    .section-head h2{font-size:28px;margin:0}
+    .muted{color:var(--muted)}
+
+    .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 22px}
+    .chip{border:1px solid var(--ring);background:#0f1a2d;border-radius:999px;padding:8px 12px;cursor:pointer;font-size:13px}
+    .chip.active{background:rgba(6,182,212,.18);border-color:rgba(6,182,212,.5)}
+    .search{display:flex;gap:10px;margin-bottom:12px}
+    .search input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c1426;color:#e5e7eb}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{border-radius:16px;overflow:hidden;background:#0e1629;border:1px solid var(--ring);cursor:pointer;transition:transform .12s ease}
+    .project:hover{transform:translateY(-2px)}
+    .project img{height:220px;width:100%;object-fit:cover;background:#0b1220}
+    .p-body{padding:14px}
+    .pill{display:inline-flex;padding:4px 8px;border-radius:999px;font-size:12px;color:#0b1220;background:#67e8f9;font-weight:600}
+    .empty{color:#94a3b8;padding:12px 2px}
+
+    footer{border-top:1px solid var(--ring);padding:28px 0;color:#94a3b8}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);z-index:100}
+    .modal.open{display:flex}
+    .modalCard{width:min(920px,94vw);max-height:90vh;overflow:auto;background:#0e1629;border:1px solid var(--ring);border-radius:18px;box-shadow:var(--shadow)}
+    .modalHead{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid var(--ring)}
+    .modalBody{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;padding:16px}
+    .modalBody img{width:100%;height:340px;object-fit:cover;border-radius:14px;background:#0b1220}
+    .kv{display:grid;gap:6px;font-size:14px;color:#cbd5e1}
+    .kv div{display:flex;gap:8px}
+    .closeBtn{border:1px solid var(--ring);background:#0f1a2d;color:#e5e7eb;border-radius:10px;padding:8px 12px;cursor:pointer}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .modalBody{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .menu{display:none}
+      .burger{display:inline-flex;padding:8px 10px;border-radius:10px;border:1px solid var(--ring);background:transparent;color:#e5e7eb}
+      .mobile{display:none;position:absolute;top:64px;left:16px;right:16px;background:#0c1325;border:1px solid var(--ring);border-radius:14px;padding:12px}
+      .mobile a{display:block;padding:12px;border-radius:10px}
+      .mobile a:hover{background:rgba(255,255,255,.06)}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Grupo Olimpo home">
+        <img src="logo.png" alt="Grupo Olimpo logo" class="logo-img" />
+        <h1 data-i18n="brand">GRUPO OLIMPO</h1>
+      </a>
+      <div class="menu" role="navigation" aria-label="primary">
+        <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="index.html#markets" data-i18n="nav.markets">Markets</a>
+        <a href="index.html#permits" data-i18n="nav.permits">Permits & ESG</a>
+        <a href="index.html#why" data-i18n="nav.why">Why Olimpo</a>
+        <a href="index.html#contact" class="cta" data-i18n="nav.quote">Request a Quote</a>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="lang" id="langToggle" aria-label="Toggle language">EN/ES</button>
+        <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile container" role="navigation" aria-label="mobile">
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="index.html#markets" data-i18n="nav.markets">Markets</a>
+      <a href="index.html#permits" data-i18n="nav.permits">Permits & ESG</a>
+      <a href="index.html#why" data-i18n="nav.why">Why Olimpo</a>
+      <a href="index.html#contact" class="cta" style="display:inline-flex;margin-top:8px" data-i18n="nav.quote">Request a Quote</a>
+    </div>
+  </nav>
+
+  <!-- PORTFOLIO PAGE -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="port.h">Full Portfolio</h2>
+        <a href="index.html#projects" class="muted" data-i18n="port.back">← Back to featured</a>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search projects by title or summary" data-i18n-placeholder="port.search"/>
+      </div>
+
+      <div class="filters">
+        <button class="chip active" data-filter="All" data-i18n="port.all">All</button>
+        <button class="chip" data-filter="Infrastructure" data-i18n="m.infra">Infrastructure</button>
+        <button class="chip" data-filter="Energy" data-i18n="m.energy">Energy & Gas</button>
+        <button class="chip" data-filter="Industrial" data-i18n="m.ind">Industrial</button>
+        <button class="chip" data-filter="Building" data-i18n="m.building">Building</button>
+      </div>
+
+      <div id="portfolioGrid" class="grid">
+        <!-- Placeholder project cards -->
+        <article class="project" data-market="Infrastructure" data-title="Interchange Upgrade Alpha" data-year="2023" data-location="Jalisco" data-client="Client A" data-summary="Bridge deck replacements; ramp realignment under traffic." data-img="https://picsum.photos/seed/infraA/1200/800">
+          <img src="https://picsum.photos/seed/infraA/800/600" alt="Infrastructure"/>
+          <div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Interchange Upgrade Alpha</h3><p class="muted">Bridge deck replacements; ramp realignment under traffic.</p></div>
+        </article>
+
+        <article class="project" data-market="Energy" data-title="Gas Compression Beta" data-year="2024" data-location="NL" data-client="Client B" data-summary="EPC civil + structural; zero LTIs; commissioning support." data-img="https://picsum.photos/seed/energiaB/1200/800">
+          <img src="https://picsum.photos/seed/energiaB/800/600" alt="Energy"/>
+          <div class="p-body"><div class="pill">Energy & Gas</div><h3>Gas Compression Beta</h3><p class="muted">EPC civil + structural; zero LTIs; commissioning support.</p></div>
+        </article>
+
+        <article class="project" data-market="Industrial" data-title="Warehouse Expansion Gamma" data-year="2022" data-location="Edomex" data-client="Client C" data-summary="Design–build 20k m²; phased delivery." data-img="https://picsum.photos/seed/industrialC/1200/800">
+          <img src="https://picsum.photos/seed/industrialC/800/600" alt="Industrial"/>
+          <div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Warehouse Expansion Gamma</h3><p class="muted">Design–build 20k m²; phased delivery.</p></div>
+        </article>
+
+        <article class="project" data-market="Building" data-title="Corporate Fit-Out Delta" data-year="2021" data-location="CDMX" data-client="Client D" data-summary="Fast-track interiors; occupied building." data-img="https://picsum.photos/seed/buildingD/1200/800">
+          <img src="https://picsum.photos/seed/buildingD/800/600" alt="Building"/>
+          <div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Corporate Fit-Out Delta</h3><p class="muted">Fast-track interiors; occupied building.</p></div>
+        </article>
+
+        <!-- more placeholders -->
+        <article class="project" data-market="Infrastructure" data-title="Bridge Rehab Epsilon" data-year="2023" data-location="Tamaulipas" data-client="Client E" data-summary="Structural rehab with staged traffic." data-img="https://picsum.photos/seed/infraE/1200/800"><img src="https://picsum.photos/seed/infraE/800/600" alt=""><div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Bridge Rehab Epsilon</h3><p class="muted">Structural rehab with staged traffic.</p></div></article>
+
+        <article class="project" data-market="Energy" data-title="Refinery Civil Zeta" data-year="2022" data-location="Veracruz" data-client="Client F" data-summary="Deep foundations; heavy civils." data-img="https://picsum.photos/seed/energiaF/1200/800"><img src="https://picsum.photos/seed/energiaF/800/600" alt=""><div class="p-body"><div class="pill">Energy & Gas</div><h3>Refinery Civil Zeta</h3><p class="muted">Deep foundations; heavy civils.</p></div></article>
+
+        <article class="project" data-market="Industrial" data-title="Plant Turnaround Eta" data-year="2024" data-location="Coahuila" data-client="Client G" data-summary="Shutdown window; safety critical path." data-img="https://picsum.photos/seed/industrialG/1200/800"><img src="https://picsum.photos/seed/industrialG/800/600" alt=""><div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Plant Turnaround Eta</h3><p class="muted">Shutdown window; safety critical path.</p></div></article>
+
+        <article class="project" data-market="Building" data-title="Retail Pavilion Theta" data-year="2023" data-location="GTO" data-client="Client H" data-summary="Canopy steel + finishes." data-img="https://picsum.photos/seed/buildingH/1200/800"><img src="https://picsum.photos/seed/buildingH/800/600" alt=""><div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Retail Pavilion Theta</h3><p class="muted">Canopy steel + finishes.</p></div></article>
+
+        <article class="project" data-market="Infrastructure" data-title="Waterline Upgrade Iota" data-year="2022" data-location="QRO" data-client="Client I" data-summary="Trenching + tie-ins; QA/QC." data-img="https://picsum.photos/seed/infraI/1200/800"><img src="https://picsum.photos/seed/infraI/800/600" alt=""><div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Waterline Upgrade Iota</h3><p class="muted">Trenching + tie-ins; QA/QC.</p></div></article>
+
+        <article class="project" data-market="Energy" data-title="Pipeline Crossing Kappa" data-year="2021" data-location="Tamps" data-client="Client J" data-summary="HDD crossing; ROW coordination." data-img="https://picsum.photos/seed/energiaJ/1200/800"><img src="https://picsum.photos/seed/energiaJ/800/600" alt=""><div class="p-body"><div class="pill">Energy & Gas</div><h3>Pipeline Crossing Kappa</h3><p class="muted">HDD crossing; ROW coordination.</p></div></article>
+
+        <article class="project" data-market="Industrial" data-title="Foundations Lambda" data-year="2020" data-location="Pue" data-client="Client K" data-summary="Mat foundations for equipment." data-img="https://picsum.photos/seed/industrialK/1200/800"><img src="https://picsum.photos/seed/industrialK/800/600" alt=""><div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Foundations Lambda</h3><p class="muted">Mat foundations for equipment.</p></div></article>
+
+        <article class="project" data-market="Building" data-title="Office Renovation Mu" data-year="2024" data-location="NL" data-client="Client L" data-summary="Phased fit-out; noise control." data-img="https://picsum.photos/seed/buildingL/1200/800"><img src="https://picsum.photos/seed/buildingL/800/600" alt=""><div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Office Renovation Mu</h3><p class="muted">Phased fit-out; noise control.</p></div></article>
+
+      </div>
+      <div id="emptyState" class="empty" style="display:none">No projects match your filters.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <small>© {2025} Grupo Olimpo · <span data-i18n="foot.tag">Engineering & Construction</span></small>
+      <small><span data-i18n="foot.careers">Careers</span> · <a href="#" data-i18n="foot.cv">Submit CV</a></small>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+    <div class="modalCard">
+      <div class="modalHead">
+        <h3 id="mTitle">Project Title</h3>
+        <button class="closeBtn" id="mClose">Close</button>
+      </div>
+      <div class="modalBody">
+        <img id="mImg" src="" alt="Project image"/>
+        <div class="kv">
+          <div><strong>Market:</strong> <span id="mMarket"></span></div>
+          <div><strong>Year:</strong> <span id="mYear"></span></div>
+          <div><strong>Location:</strong> <span id="mLoc"></span></div>
+          <div><strong>Client:</strong> <span id="mClient"></span></div>
+          <div><strong>Summary:</strong> <span id="mSummary"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu
+    const burger = document.getElementById('burger');
+    const mobile = document.getElementById('mobileMenu');
+    burger?.addEventListener('click', ()=>{
+      const open = mobile.style.display==='block';
+      mobile.style.display = open ? 'none':'block';
+      burger.setAttribute('aria-expanded', String(!open));
+    });
+
+    // Same i18n object as index.html (copy/paste)
+    const i18n = {
+      en:{
+        brand:"GRUPO OLIMPO",
+        nav:{projects:"Projects",portfolio:"Portfolio",markets:"Markets",permits:"Permits & ESG",why:"Why Olimpo",quote:"Request a Quote"},
+        markets:{},m:{},proj:{},perm:{},why:{},logos:{},test:{},
+        contact:{alert:"Thanks! This is a mockup; connect this form to your CRM or email."},
+        foot:{tag:"Engineering & Construction",careers:"Careers",cv:"Submit CV"},
+        port:{h:"Full Portfolio",back:"← Back to featured",search:"Search projects by title or summary",all:"All"}
+      },
+      es:{
+        brand:"GRUPO OLIMPO",
+        nav:{projects:"Proyectos",portfolio:"Portafolio",markets:"Sectores",permits:"Permisos y ESG",why:"Por qué Olimpo",quote:"Solicitar cotización"},
+        markets:{},m:{},proj:{},perm:{},why:{},logos:{},test:{},
+        contact:{alert:"Gracias. Esto es un mockup; conecte este formulario a su CRM o email."},
+        foot:{tag:"Ingeniería y Construcción",careers:"Bolsa de trabajo",cv:"Enviar CV"},
+        port:{h:"Portafolio Completo",back:"← Volver a destacados",search:"Buscar proyectos por título o resumen",all:"Todos"}
+      }
+    };
+
+    let currentLang = 'en';
+    const langBtn = document.getElementById('langToggle');
+    function applyI18n(){
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const path = el.getAttribute('data-i18n').split('.');
+        let val = i18n[currentLang];
+        path.forEach(k=> val = val?.[k]);
+        if(typeof val==='string') el.textContent = val;
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+        const path = el.getAttribute('data-i18n-placeholder').split('.');
+        let val = i18n[currentLang];
+        path.forEach(k=> val = val?.[k]);
+        if(typeof val==='string') el.setAttribute('placeholder', val);
+      });
+      document.documentElement.lang = currentLang;
+      document.documentElement.setAttribute('data-lang', currentLang);
+    }
+    langBtn?.addEventListener('click', ()=>{ currentLang = currentLang==='en'?'es':'en'; applyI18n(); });
+    applyI18n();
+
+    // Portfolio filter/search/modal
+    const chips = document.querySelectorAll('.chip');
+    const grid = document.getElementById('portfolioGrid');
+    const items = grid ? Array.from(grid.querySelectorAll('.project')) : [];
+    const searchInput = document.getElementById('searchInput');
+    const emptyState = document.getElementById('emptyState');
+
+    function applyFilters(){
+      const activeChip = document.querySelector('.chip.active');
+      const filter = activeChip ? activeChip.getAttribute('data-filter') : 'All';
+      const q = (searchInput?.value || '').trim().toLowerCase();
+      let visible = 0;
+      items.forEach(el=>{
+        const market = el.getAttribute('data-market');
+        const title = (el.getAttribute('data-title')||'').toLowerCase();
+        const summary = (el.getAttribute('data-summary')||'').toLowerCase();
+        const byMarket = (filter === 'All' || filter === 'Todos' || market === filter);
+        const byText = (!q || title.includes(q) || summary.includes(q));
+        const show = byMarket && byText;
+        el.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      if(emptyState){ emptyState.style.display = visible ? 'none':'block'; }
+    }
+
+    chips.forEach(c=>{
+      c.addEventListener('click', ()=>{
+        chips.forEach(x=>x.classList.remove('active'));
+        c.classList.add('active');
+        applyFilters();
+      });
+    });
+    searchInput?.addEventListener('input', applyFilters);
+
+    const modal = document.getElementById('projectModal');
+    const closeBtn = document.getElementById('mClose');
+    const mTitle = document.getElementById('mTitle');
+    const mImg = document.getElementById('mImg');
+    const mMarket = document.getElementById('mMarket');
+    const mYear = document.getElementById('mYear');
+    const mLoc = document.getElementById('mLoc');
+    const mClient = document.getElementById('mClient');
+    const mSummary = document.getElementById('mSummary');
+
+    function openModal(fromEl){
+      mTitle.textContent = fromEl.getAttribute('data-title') || 'Project';
+      mImg.src = fromEl.getAttribute('data-img') || fromEl.querySelector('img')?.src || '';
+      mMarket.textContent = fromEl.getAttribute('data-market') || '';
+      mYear.textContent = fromEl.getAttribute('data-year') || '';
+      mLoc.textContent = fromEl.getAttribute('data-location') || '';
+      mClient.textContent = fromEl.getAttribute('data-client') || '';
+      mSummary.textContent = fromEl.getAttribute('data-summary') || '';
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+    }
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+    }
+    closeBtn?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', e=>{ if(e.target === modal) closeModal(); });
+    items.forEach(el=> el.addEventListener('click', ()=> openModal(el)));
+
+    applyFilters();
+  </script>
+</body>
+</html>
