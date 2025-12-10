@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grupo Olimpo | Portfolio</title>
-  <meta name="description" content="Full portfolio of Grupo Olimpo construction and engineering projects."/>
+  <meta name="description" content="Full portfolio of Grupo Olimpo construction and engineering projects across energy, infrastructure, industrial, and building sectors."/>
   <style>
     :root{
       --bg:#0b1021; --layer:#0c1426; --ink:#0b1220; --text:#e5e7eb; --muted:#94a3b8;
@@ -119,50 +119,76 @@
 
       <div class="filters">
         <button class="chip active" data-filter="All" data-i18n="port.all">All</button>
-        <button class="chip" data-filter="Infrastructure" data-i18n="m.infra">Infrastructure</button>
-        <button class="chip" data-filter="Energy" data-i18n="m.energy">Energy & Gas</button>
+        <button class="chip" data-filter="Energy & Gas" data-i18n="m.infra">Energy & Gas</button>
+        <button class="chip" data-filter="Infrastructure" data-i18n="m.energy">Infrastructure</button>
         <button class="chip" data-filter="Industrial" data-i18n="m.ind">Industrial</button>
         <button class="chip" data-filter="Building" data-i18n="m.building">Building</button>
       </div>
 
       <div id="portfolioGrid" class="grid">
-        <!-- Placeholder project cards -->
-        <article class="project" data-market="Infrastructure" data-title="Interchange Upgrade Alpha" data-year="2023" data-location="Jalisco" data-client="Client A" data-summary="Bridge deck replacements; ramp realignment under traffic." data-img="https://picsum.photos/seed/infraA/1200/800">
-          <img src="https://picsum.photos/seed/infraA/800/600" alt="Infrastructure"/>
-          <div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Interchange Upgrade Alpha</h3><p class="muted">Bridge deck replacements; ramp realignment under traffic.</p></div>
+        <!-- Energy & Gas Projects -->
+        <article class="project" data-market="Energy & Gas" data-title="PEMEX Refinery Reconfiguration" data-year="2023" data-location="Veracruz" data-client="PEMEX" data-summary="Major refinery upgrade project including reconfiguration of distillation units and safety systems." data-img="http://www.grupoolimpo.com.mx/imagenes/inicio1.jpg">
+          <img src="http://www.grupoolimpo.com.mx/imagenes/inicio1.jpg" alt="PEMEX Refinery Project"/>
+          <div class="p-body"><div class="pill">Energy & Gas</div><h3>PEMEX Refinery Reconfiguration</h3><p class="muted">Refinery upgrade with modern safety systems and efficiency improvements.</p></div>
         </article>
 
-        <article class="project" data-market="Energy" data-title="Gas Compression Beta" data-year="2024" data-location="NL" data-client="Client B" data-summary="EPC civil + structural; zero LTIs; commissioning support." data-img="https://picsum.photos/seed/energiaB/1200/800">
-          <img src="https://picsum.photos/seed/energiaB/800/600" alt="Energy"/>
-          <div class="p-body"><div class="pill">Energy & Gas</div><h3>Gas Compression Beta</h3><p class="muted">EPC civil + structural; zero LTIs; commissioning support.</p></div>
+        <article class="project" data-market="Energy & Gas" data-title="CFE Cogeneration Plant" data-year="2022" data-location="Nuevo León" data-client="CFE" data-summary="Construction of 50MW cogeneration plant for industrial park power supply." data-img="https://picsum.photos/seed/energiaB/1200/800">
+          <img src="https://picsum.photos/seed/energiaB/800/600" alt="CFE Cogeneration Plant"/>
+          <div class="p-body"><div class="pill">Energy & Gas</div><h3>CFE Cogeneration Plant</h3><p class="muted">50MW power plant construction with zero LTIs; commissioning support.</p></div>
         </article>
 
-        <article class="project" data-market="Industrial" data-title="Warehouse Expansion Gamma" data-year="2022" data-location="Edomex" data-client="Client C" data-summary="Design–build 20k m²; phased delivery." data-img="https://picsum.photos/seed/industrialC/1200/800">
-          <img src="https://picsum.photos/seed/industrialC/800/600" alt="Industrial"/>
-          <div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Warehouse Expansion Gamma</h3><p class="muted">Design–build 20k m²; phased delivery.</p></div>
+        <article class="project" data-market="Energy & Gas" data-title="Private Power Plant" data-year="2024" data-location="Guadalajara" data-client="Private Client" data-summary="EPC project for industrial client's private power generation facility." data-img="https://picsum.photos/seed/energiaC/1200/800">
+          <img src="https://picsum.photos/seed/energiaC/800/600" alt="Private Power Plant"/>
+          <div class="p-body"><div class="pill">Energy & Gas</div><h3>Private Power Plant</h3><p class="muted">Complete EPC for industrial client's private generation needs.</p></div>
         </article>
 
-        <article class="project" data-market="Building" data-title="Corporate Fit-Out Delta" data-year="2021" data-location="CDMX" data-client="Client D" data-summary="Fast-track interiors; occupied building." data-img="https://picsum.photos/seed/buildingD/1200/800">
-          <img src="https://picsum.photos/seed/buildingD/800/600" alt="Building"/>
-          <div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Corporate Fit-Out Delta</h3><p class="muted">Fast-track interiors; occupied building.</p></div>
+        <!-- Infrastructure Projects -->
+        <article class="project" data-market="Infrastructure" data-title="Bridge Construction Project" data-year="2024" data-location="Jalisco" data-client="State Government" data-summary="Design and construction of major highway bridge with innovative engineering solutions." data-img="http://www.grupoolimpo.com.mx/imagenes/inicio2.jpg">
+          <img src="http://www.grupoolimpo.com.mx/imagenes/inicio2.jpg" alt="Bridge Construction"/>
+          <div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Bridge Construction Project</h3><p class="muted">Major highway bridge with innovative engineering solutions.</p></div>
         </article>
 
-        <!-- more placeholders -->
-        <article class="project" data-market="Infrastructure" data-title="Bridge Rehab Epsilon" data-year="2023" data-location="Tamaulipas" data-client="Client E" data-summary="Structural rehab with staged traffic." data-img="https://picsum.photos/seed/infraE/1200/800"><img src="https://picsum.photos/seed/infraE/800/600" alt=""><div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Bridge Rehab Epsilon</h3><p class="muted">Structural rehab with staged traffic.</p></div></article>
+        <article class="project" data-market="Infrastructure" data-title="Highway Expansion" data-year="2023" data-location="State of Mexico" data-client="Federal Government" data-summary="Expansion of 25km highway section including bridges and interchanges." data-img="https://picsum.photos/seed/infraA/1200/800">
+          <img src="https://picsum.photos/seed/infraA/800/600" alt="Highway Expansion"/>
+          <div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Highway Expansion</h3><p class="muted">25km highway expansion including bridges and interchanges.</p></div>
+        </article>
 
-        <article class="project" data-market="Energy" data-title="Refinery Civil Zeta" data-year="2022" data-location="Veracruz" data-client="Client F" data-summary="Deep foundations; heavy civils." data-img="https://picsum.photos/seed/energiaF/1200/800"><img src="https://picsum.photos/seed/energiaF/800/600" alt=""><div class="p-body"><div class="pill">Energy & Gas</div><h3>Refinery Civil Zeta</h3><p class="muted">Deep foundations; heavy civils.</p></div></article>
+        <article class="project" data-market="Infrastructure" data-title="Port Infrastructure" data-year="2022" data-location="Veracruz" data-client="Port Authority" data-summary="Dock construction and port infrastructure improvements." data-img="https://picsum.photos/seed/infraE/1200/800">
+          <img src="https://picsum.photos/seed/infraE/800/600" alt="Port Infrastructure"/>
+          <div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Port Infrastructure</h3><p class="muted">Dock construction and port infrastructure improvements.</p></div>
+        </article>
 
-        <article class="project" data-market="Industrial" data-title="Plant Turnaround Eta" data-year="2024" data-location="Coahuila" data-client="Client G" data-summary="Shutdown window; safety critical path." data-img="https://picsum.photos/seed/industrialG/1200/800"><img src="https://picsum.photos/seed/industrialG/800/600" alt=""><div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Plant Turnaround Eta</h3><p class="muted">Shutdown window; safety critical path.</p></div></article>
+        <!-- Industrial Projects -->
+        <article class="project" data-market="Industrial" data-title="Food Processing Plant" data-year="2022" data-location="Querétaro" data-client="Food Industry Leader" data-summary="Complete EPC project for food processing facility including specialized areas." data-img="http://www.grupoolimpo.com.mx/edificacion/136_p51.jpg">
+          <img src="http://www.grupoolimpo.com.mx/edificacion/136_p51.jpg" alt="Food Processing Plant"/>
+          <div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Food Processing Plant</h3><p class="muted">Complete EPC project for food industry leader.</p></div>
+        </article>
 
-        <article class="project" data-market="Building" data-title="Retail Pavilion Theta" data-year="2023" data-location="GTO" data-client="Client H" data-summary="Canopy steel + finishes." data-img="https://picsum.photos/seed/buildingH/1200/800"><img src="https://picsum.photos/seed/buildingH/800/600" alt=""><div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Retail Pavilion Theta</h3><p class="muted">Canopy steel + finishes.</p></div></article>
+        <article class="project" data-market="Industrial" data-title="Pharmaceutical Facility" data-year="2023" data-location="Mexico City" data-client="Pharmaceutical Company" data-summary="GMP-compliant pharmaceutical manufacturing plant with clean rooms." data-img="https://picsum.photos/seed/industrialC/1200/800">
+          <img src="https://picsum.photos/seed/industrialC/800/600" alt="Pharmaceutical Facility"/>
+          <div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Pharmaceutical Facility</h3><p class="muted">GMP-compliant plant with specialized clean room areas.</p></div>
+        </article>
 
-        <article class="project" data-market="Infrastructure" data-title="Waterline Upgrade Iota" data-year="2022" data-location="QRO" data-client="Client I" data-summary="Trenching + tie-ins; QA/QC." data-img="https://picsum.photos/seed/infraI/1200/800"><img src="https://picsum.photos/seed/infraI/800/600" alt=""><div class="p-body"><div class="pill" style="background:#a7f3d0">Infrastructure</div><h3>Waterline Upgrade Iota</h3><p class="muted">Trenching + tie-ins; QA/QC.</p></div></article>
+        <article class="project" data-market="Industrial" data-title="Automotive Plant" data-year="2024" data-location="Guanajuato" data-client="Automotive Manufacturer" data-summary="Assembly plant construction for automotive industry client." data-img="https://picsum.photos/seed/industrialG/1200/800">
+          <img src="https://picsum.photos/seed/industrialG/800/600" alt="Automotive Plant"/>
+          <div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Automotive Plant</h3><p class="muted">Assembly plant construction for automotive manufacturer.</p></div>
+        </article>
 
-        <article class="project" data-market="Energy" data-title="Pipeline Crossing Kappa" data-year="2021" data-location="Tamps" data-client="Client J" data-summary="HDD crossing; ROW coordination." data-img="https://picsum.photos/seed/energiaJ/1200/800"><img src="https://picsum.photos/seed/energiaJ/800/600" alt=""><div class="p-body"><div class="pill">Energy & Gas</div><h3>Pipeline Crossing Kappa</h3><p class="muted">HDD crossing; ROW coordination.</p></div></article>
+        <!-- Building Projects -->
+        <article class="project" data-market="Building" data-title="Corporate Headquarters" data-year="2023" data-location="Mexico City" data-client="Multinational Corporation" data-summary="22-story corporate headquarters with LEED certification goals." data-img="https://picsum.photos/seed/buildingD/1200/800">
+          <img src="https://picsum.photos/seed/buildingD/800/600" alt="Corporate Headquarters"/>
+          <div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Corporate Headquarters</h3><p class="muted">22-story LEED-certified corporate building.</p></div>
+        </article>
 
-        <article class="project" data-market="Industrial" data-title="Foundations Lambda" data-year="2020" data-location="Pue" data-client="Client K" data-summary="Mat foundations for equipment." data-img="https://picsum.photos/seed/industrialK/1200/800"><img src="https://picsum.photos/seed/industrialK/800/600" alt=""><div class="p-body"><div class="pill" style="background:#fde68a">Industrial</div><h3>Foundations Lambda</h3><p class="muted">Mat foundations for equipment.</p></div></article>
+        <article class="project" data-market="Building" data-title="Shopping Plaza" data-year="2022" data-location="Monterrey" data-client="Retail Chain" data-summary="Large-scale shopping plaza with multiple anchor stores and parking." data-img="https://picsum.photos/seed/buildingH/1200/800">
+          <img src="https://picsum.photos/seed/buildingH/800/600" alt="Shopping Plaza"/>
+          <div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Shopping Plaza</h3><p class="muted">Large-scale retail development with multiple anchor stores.</p></div>
+        </article>
 
-        <article class="project" data-market="Building" data-title="Office Renovation Mu" data-year="2024" data-location="NL" data-client="Client L" data-summary="Phased fit-out; noise control." data-img="https://picsum.photos/seed/buildingL/1200/800"><img src="https://picsum.photos/seed/buildingL/800/600" alt=""><div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>Office Renovation Mu</h3><p class="muted">Phased fit-out; noise control.</p></div></article>
+        <article class="project" data-market="Building" data-title="University Campus" data-year="2024" data-location="Puebla" data-client="Private University" data-summary="New campus buildings including classrooms, labs, and student facilities." data-img="https://picsum.photos/seed/buildingL/1200/800">
+          <img src="https://picsum.photos/seed/buildingL/800/600" alt="University Campus"/>
+          <div class="p-body"><div class="pill" style="background:#93c5fd">Building</div><h3>University Campus</h3><p class="muted">New campus buildings with modern educational facilities.</p></div>
+        </article>
 
       </div>
       <div id="emptyState" class="empty" style="display:none">No projects match your filters.</div>
@@ -171,7 +197,7 @@
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <small>© {2025} Grupo Olimpo · <span data-i18n="foot.tag">Engineering & Construction</span></small>
+      <small>© 2025 Grupo Olimpo · <span data-i18n="foot.tag">Engineering & Construction</span></small>
       <small><span data-i18n="foot.careers">Careers</span> · <a href="#" data-i18n="foot.cv">Submit CV</a></small>
     </div>
   </footer>
@@ -211,15 +237,15 @@
       en:{
         brand:"GRUPO OLIMPO",
         nav:{projects:"Projects",portfolio:"Portfolio",markets:"Markets",permits:"Permits & ESG",why:"Why Olimpo",quote:"Request a Quote"},
-        markets:{},m:{},proj:{},perm:{},why:{},logos:{},test:{},
+        markets:{},m:{infra:"Energy & Gas",energy:"Infrastructure",ind:"Industrial",building:"Building"},proj:{},perm:{},why:{},logos:{},test:{},
         contact:{alert:"Thanks! This is a mockup; connect this form to your CRM or email."},
         foot:{tag:"Engineering & Construction",careers:"Careers",cv:"Submit CV"},
         port:{h:"Full Portfolio",back:"← Back to featured",search:"Search projects by title or summary",all:"All"}
       },
       es:{
         brand:"GRUPO OLIMPO",
-        nav:{projects:"Proyectos",portfolio:"Portafolio",markets:"Sectores",permits:"Permisos y ESG",why:"Por qué Olimpo",quote:"Solicitar cotización"},
-        markets:{},m:{},proj:{},perm:{},why:{},logos:{},test:{},
+        nav:{projects:"Proyectos",portfolio:"Portfolio",markets:"Sectores",permits:"Permisos y ESG",why:"Por qué Olimpo",quote:"Solicitar cotización"},
+        markets:{},m:{infra:"Energía y Gas",energy:"Infraestructura",ind:"Industrial",building:"Edificación"},proj:{},perm:{},why:{},logos:{},test:{},
         contact:{alert:"Gracias. Esto es un mockup; conecte este formulario a su CRM o email."},
         foot:{tag:"Ingeniería y Construcción",careers:"Bolsa de trabajo",cv:"Enviar CV"},
         port:{h:"Portafolio Completo",back:"← Volver a destacados",search:"Buscar proyectos por título o resumen",all:"Todos"}

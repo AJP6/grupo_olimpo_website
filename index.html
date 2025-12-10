@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grupo Olimpo | Engineering & Construction</title>
-  <meta name="description" content="Grupo Olimpo – infrastructure, energy, and industrial construction across Mexico. Safety-first, schedule-driven, quality-controlled."/>
+  <meta name="description" content="Grupo Olimpo – A strategic ally in construction. EPC projects across energy, infrastructure, industrial, and building sectors in Mexico."/>
   <style>
     :root{
       --bg:#0b1021; --layer:#0c1426; --ink:#0b1220; --text:#e5e7eb; --muted:#94a3b8;
@@ -30,7 +30,8 @@
 
     header.hero{padding:84px 0 40px}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
-    .badge{display:inline-flex;gap:10px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.35);color:#cffafe;font-size:12px}
+    .badge{display:inline-flex;gap:3px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.35);color:#cffafe;font-size:12px}
+    .badge span {display: inline;white-space: nowrap;}
     .h1{font-size:44px;line-height:1.06;margin:16px 0 10px;letter-spacing:.3px}
     .lead{color:var(--muted);font-size:18px;max-width:60ch}
     .hero-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -59,7 +60,7 @@
     .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 
     .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;opacity:.85}
-    .logoBox{height:54px;background:#0f1a2d;border:1px dashed rgba(255,255,255,.12);border-radius:12px}
+    .logoBox{height:54px;background:#0f1a2d;border:1px dashed rgba(255,255,255,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600}
 
     .band{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .band .tag{padding:10px 12px;border-radius:999px;background:#0f1a2d;border:1px solid var(--ring);font-size:13px;display:inline-flex;gap:8px;align-items:center}
@@ -69,6 +70,8 @@
     .form input,.form textarea,.form select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c1426;color:#e5e7eb}
     .form button{border:0;padding:12px 14px;border-radius:12px;background:var(--accent);color:#04110a;font-weight:700}
 
+    .partnership{background:linear-gradient(135deg,#0f172a,#0c1426);border-radius:var(--radius);padding:32px;border:1px solid var(--ring);margin-top:32px}
+    
     footer{border-top:1px solid var(--ring);padding:28px 0;color:#94a3b8}
 
     /* Mobile */
@@ -87,6 +90,7 @@
       .mobile{display:none;position:absolute;top:64px;left:16px;right:16px;background:#0c1325;border:1px solid var(--ring);border-radius:14px;padding:12px}
       .mobile a{display:block;padding:12px;border-radius:10px}
       .mobile a:hover{background:rgba(255,255,255,.06)}
+      .band{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -125,45 +129,43 @@
   <header class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="badge"><span data-i18n="hero.badge">Over</span> {{YEARS_EXPERIENCE}} <span data-i18n="hero.badge2">years building across</span> {{CORE_REGIONS}}</div>
+        <div class="badge"><span data-i18n="hero.badge">Over</span> 11 <span data-i18n="hero.badge2">years building across</span> all Mexican territory</div>
         <h2 class="h1">
-          <span data-i18n="hero.titleA">Engineering & construction for</span>
-          <span style="color:var(--brand)" data-i18n="hero.tInfra">infrastructure</span>,
-          <span style="color:#7dd3fc" data-i18n="hero.tEnergy">energy</span>
-          <span data-i18n="hero.and">and</span>
-          <span style="color:#86efac" data-i18n="hero.tIndustrial">industrial</span>
-          <span data-i18n="hero.titleB">projects.</span>
+          <span data-i18n="hero.titleA">A Strategic Ally in</span>
+          <span style="color:var(--brand)" data-i18n="hero.tInfra">Construction</span>
+          <span data-i18n="hero.and">&</span>
+          <span style="color:#7dd3fc" data-i18n="hero.tEnergy">Engineering</span>
         </h2>
-        <p class="lead" data-i18n="hero.lead">We deliver safely, on schedule and on budget, using modern methods (BIM/VDC, prefabrication, quality control) for reliable outcomes.</p>
+        <p class="lead" data-i18n="hero.lead">A prominent Mexican construction company established as a reference in the development of significant EPC (Engineering, Procurement, and Construction) projects across various sectors of the economy.</p>
         <div style="display:flex;gap:12px;margin-top:18px">
           <a class="cta" href="#contact" data-i18n="hero.cta1">Request a proposal</a>
-          <a class="cta" style="background:#e5e7eb;color:#0b1220" href="#projects" data-i18n="hero.cta2">View projects</a>
+          <a class="cta" style="background:#e5e7eb;color:#0b1220" href="#partnership" data-i18n="hero.cta2">Partnership Opportunities</a>
         </div>
         <div style="display:flex;gap:18px;margin-top:20px;color:var(--muted);font-size:14px">
-          <span data-i18n="hero.cert">✓ Certifications: {ISO_9001} {Safety}</span>
-          <span data-i18n="hero.cover">✓ Coverage: {STATES/MARKETS}</span>
+          <span data-i18n="hero.cert">✓ Annual Revenue: $25M USD</span>
+          <span data-i18n="hero.cover">✓ Coverage: All Mexican Territory</span>
         </div>
       </div>
       <div class="hero-cards">
         <div class="card">
-          <h4 data-i18n="hero.kpi1h">On-time delivery</h4>
-          <div class="stat">{{PCT_ON_TIME}}</div>
-          <div class="muted" data-i18n="hero.kpi1t">Average over {{YEARS_ANALYZED}} years.</div>
+          <h4 data-i18n="hero.kpi1h">Years of Experience</h4>
+          <div class="stat">11+</div>
+          <div class="muted" data-i18n="hero.kpi1t">Building excellence since 2013</div>
         </div>
         <div class="card">
-          <h4 data-i18n="hero.kpi2h">Safety first</h4>
-          <div class="stat">{{TRIR}} TRIR</div>
-          <div class="muted" data-i18n="hero.kpi2t">Site safety indicator.</div>
+          <h4 data-i18n="hero.kpi2h">Team Capacity</h4>
+          <div class="stat">40 + 1,000</div>
+          <div class="muted" data-i18n="hero.kpi2t">Fixed staff + construction workers</div>
         </div>
         <div class="card">
-          <h4 data-i18n="hero.kpi3h">Capacity</h4>
-          <div class="stat">{{BUILT_M2}} m²</div>
-          <div class="muted" data-i18n="hero.kpi3t">Delivered in {{PERIOD}}.</div>
+          <h4 data-i18n="hero.kpi3h">Annual Revenue</h4>
+          <div class="stat">$25M</div>
+          <div class="muted" data-i18n="hero.kpi3t">Average yearly revenue in USD</div>
         </div>
         <div class="card">
-          <h4 data-i18n="hero.kpi4h">Repeat clients</h4>
-          <div class="stat">{{PCT_REPEAT}}</div>
-          <div class="muted" data-i18n="hero.kpi4t">Long-term partnerships.</div>
+          <h4 data-i18n="hero.kpi4h">Major Clients</h4>
+          <div class="stat">PEMEX, CFE</div>
+          <div class="muted" data-i18n="hero.kpi4t">National & international partners</div>
         </div>
       </div>
     </div>
@@ -174,28 +176,28 @@
     <div class="container">
       <div class="section-head">
         <h2 data-i18n="markets.h">Markets & Services</h2>
-        <p class="muted" data-i18n="markets.t">EPC and CM projects in key industries.</p>
+        <p class="muted" data-i18n="markets.t">EPC and CM projects across key economic sectors</p>
       </div>
       <div class="markets">
         <div class="market">
-          <div class="pill" data-i18n="m.infra">Infrastructure</div>
-          <h3 data-i18n="m.infrah">Roads, bridges & water</h3>
-          <p class="muted" data-i18n="m.infrat">Planning, civil works, QA/QC.</p>
+          <div class="pill" data-i18n="m.infra">Energy & Gas</div>
+          <h3 data-i18n="m.infrah">Refineries & Power Plants</h3>
+          <p class="muted" data-i18n="m.infrat">PEMEX refinery reconfiguration, cogeneration plants, CFE installations</p>
         </div>
         <div class="market">
-          <div class="pill" style="background:#a7f3d0" data-i18n="m.energy">Energy & Gas</div>
-          <h3 data-i18n="m.energyh">Refineries, pipelines, generation</h3>
-          <p class="muted" data-i18n="m.energyt">Foundations, structures, erection, testing.</p>
+          <div class="pill" style="background:#a7f3d0" data-i18n="m.energy">Infrastructure</div>
+          <h3 data-i18n="m.energyh">Bridges, Roads & Highways</h3>
+          <p class="muted" data-i18n="m.energyt">Bridges, viaducts, docks, roads, and regional development projects</p>
         </div>
         <div class="market">
           <div class="pill" style="background:#fde68a" data-i18n="m.ind">Industrial</div>
-          <h3 data-i18n="m.indh">Plants & warehouses</h3>
-          <p class="muted" data-i18n="m.indt">Design–build, expansions, turnarounds.</p>
+          <h3 data-i18n="m.indh">Plants & Warehouses</h3>
+          <p class="muted" data-i18n="m.indt">Food, pharmaceutical, brewing, automotive, cement & steel plants</p>
         </div>
         <div class="market">
           <div class="pill" style="background:#93c5fd" data-i18n="m.building">Building</div>
-          <h3 data-i18n="m.buildingh">Commercial & corporate</h3>
-          <p class="muted" data-i18n="m.buildingt">Interiors, fit-outs, finishes.</p>
+          <h3 data-i18n="m.buildingh">Commercial & Residential</h3>
+          <p class="muted" data-i18n="m.buildingt">Supermarkets, shopping plazas, corporate buildings, bus terminals</p>
         </div>
       </div>
     </div>
@@ -211,37 +213,67 @@
       <div class="projects">
         <article class="project">
           <figure>
-            <img src="http://www.grupoolimpo.com.mx/imagenes/inicio1.jpg" alt="Energy project (placeholder)"/>
-            <figcaption data-i18n="proj.cap1">High-resolution image – describe project, scope, and outcome.</figcaption>
+            <img src="http://www.grupoolimpo.com.mx/imagenes/inicio1.jpg" alt="PEMEX Refinery Reconfiguration Project"/>
+            <figcaption data-i18n="proj.cap1">PEMEX refinery reconfiguration - Energy sector</figcaption>
           </figure>
           <div class="p-body">
-            <div class="pill" data-i18n="m.energy">Energy & Gas</div>
-            <h3>{{PROJECT_TITLE_1}}</h3>
-            <p class="muted">{{PROJECT_SUMMARY_1}} · {{YEAR}}</p>
+            <div class="pill" data-i18n="m.infra">Energy & Gas</div>
+            <h3>PEMEX Refinery Upgrade</h3>
+            <p class="muted">Reconfiguration and modernization project · 2023</p>
           </div>
         </article>
         <article class="project">
           <figure>
-            <img src="http://www.grupoolimpo.com.mx/imagenes/inicio2.jpg" alt="Infrastructure project (placeholder)"/>
-            <figcaption data-i18n="proj.cap2">Add details and client name (with permission).</figcaption>
+            <img src="http://www.grupoolimpo.com.mx/imagenes/inicio2.jpg" alt="Bridge Construction Project"/>
+            <figcaption data-i18n="proj.cap2">Major bridge construction - Infrastructure development</figcaption>
           </figure>
           <div class="p-body">
             <div class="pill" style="background:#a7f3d0" data-i18n="m.infra">Infrastructure</div>
-            <h3>{{PROJECT_TITLE_2}}</h3>
-            <p class="muted">{{PROJECT_SUMMARY_2}} · {{YEAR}}</p>
+            <h3>Regional Bridge Project</h3>
+            <p class="muted">Viaduct construction with innovative engineering · 2024</p>
           </div>
         </article>
         <article class="project">
           <figure>
-            <img src="http://www.grupoolimpo.com.mx/edificacion/136_p51.jpg" alt="Industrial project (placeholder)"/>
-            <figcaption data-i18n="proj.cap3">Show complexity, safety, and schedule performance.</figcaption>
+            <img src="http://www.grupoolimpo.com.mx/edificacion/136_p51.jpg" alt="Industrial Plant Construction"/>
+            <figcaption data-i18n="proj.cap3">Industrial plant construction - Manufacturing sector</figcaption>
           </figure>
           <div class="p-body">
             <div class="pill" style="background:#fde68a" data-i18n="m.ind">Industrial</div>
-            <h3>{{PROJECT_TITLE_3}}</h3>
-            <p class="muted">{{PROJECT_SUMMARY_3}} · {{YEAR}}</p>
+            <h3>Food Processing Plant</h3>
+            <p class="muted">Complete EPC project for food industry leader · 2022</p>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP SECTION -->
+  <section id="partnership">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="partner.h">Strategic Alliances</h2>
+        <p class="muted" data-i18n="partner.t">Expanding across Mexico and Latin America</p>
+      </div>
+      <div class="partnership">
+        <h3>Partnership Opportunities</h3>
+        <p>With solid experience across various sectors of the economy, Grupo Olimpo is looking to partner with international companies to forge strategic alliances that allow for value addition and expansion of its growth in:</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px">
+          <div class="card" style="text-align:center">
+            <h4>Mexico</h4>
+            <p class="muted">Nationwide coverage and local expertise</p>
+          </div>
+          <div class="card" style="text-align:center">
+            <h4>Central America</h4>
+            <p class="muted">Regional expansion and market entry</p>
+          </div>
+          <div class="card" style="text-align:center">
+            <h4>South America</h4>
+            <p class="muted">Strategic growth and partnerships</p>
+          </div>
+        </div>
+        <p style="margin-top:24px">If you are interested in exploring collaboration opportunities, Grupo Olimpo is the ideal partner that can help enhance the development of your projects in the region.</p>
+        <a class="cta" href="#contact" style="margin-top:20px;display:inline-flex" data-i18n="partner.cta">Explore Partnership</a>
       </div>
     </div>
   </section>
@@ -269,9 +301,9 @@
         <p class="muted" data-i18n="why.t">Measurable results and modern practices</p>
       </div>
       <div class="why">
-        <div class="card"><h4 data-i18n="why.m1h">Modern methods</h4><p class="muted" data-i18n="why.m1t">BIM/VDC, prefabrication, collaborative planning to reduce risk and rework.</p></div>
-        <div class="card"><h4 data-i18n="why.m2h">Safety governance</h4><p class="muted" data-i18n="why.m2t">Programs with training, site audits and prevention culture.</p></div>
-        <div class="card"><h4 data-i18n="why.m3h">Alliances & coverage</h4><p class="muted" data-i18n="why.m3t">Vetted suppliers and capabilities in {{STATES}} states.</p></div>
+        <div class="card"><h4 data-i18n="why.m1h">EPC Expertise</h4><p class="muted" data-i18n="why.m1t">Full Engineering, Procurement, and Construction capabilities for turnkey projects.</p></div>
+        <div class="card"><h4 data-i18n="why.m2h">Multi-Sector Experience</h4><p class="muted" data-i18n="why.m2t">Proven track record across energy, infrastructure, industrial, and building sectors.</p></div>
+        <div class="card"><h4 data-i18n="why.m3h">Strategic Positioning</h4><p class="muted" data-i18n="why.m3t">Reference company in Mexico with expansion plans across Latin America.</p></div>
       </div>
     </div>
   </section>
@@ -279,10 +311,13 @@
   <!-- LOGOS -->
   <section>
     <div class="container">
-      <div class="section-head"><h2 data-i18n="logos.h">Clients & Partners</h2><span class="muted" data-i18n="logos.t">Logo placeholders</span></div>
+      <div class="section-head"><h2 data-i18n="logos.h">Clients & Partners</h2><span class="muted" data-i18n="logos.t">Trusted by industry leaders</span></div>
       <div class="logos">
-        <div class="logoBox"></div><div class="logoBox"></div><div class="logoBox"></div>
-        <div class="logoBox"></div><div class="logoBox"></div><div class="logoBox"></div>
+        <div class="logoBox">PEMEX</div>
+        <div class="logoBox">CFE</div>
+        <div class="logoBox">CROWN SIVESA</div>
+        <div class="logoBox">BECK Group</div>
+        <div class="logoBox">Power Techno Energía</div>
       </div>
     </div>
   </section>
@@ -290,11 +325,11 @@
   <!-- TESTIMONIALS -->
   <section>
     <div class="container">
-      <div class="section-head"><h2 data-i18n="test.h">Testimonials</h2><span class="muted" data-i18n="test.t">Add 2–3 brief quotes from clients and employees.</span></div>
+      <div class="section-head"><h2 data-i18n="test.h">Testimonials</h2><span class="muted" data-i18n="test.t">Client and partner experiences</span></div>
       <div class="why">
-        <div class="card"><p>“{{CLIENT_QUOTE_1}}”<br><span class="muted">— {{CLIENT_NAME}}, {{CLIENT_ROLE}}</span></p></div>
-        <div class="card"><p>“{{CLIENT_QUOTE_2}}”<br><span class="muted">— {{CLIENT_NAME_2}}, {{CLIENT_ROLE_2}}</span></p></div>
-        <div class="card"><p>“{{EMPLOYEE_QUOTE}}”<br><span class="muted">— {{EMPLOYEE_NAME}}, {{EMPLOYEE_TITLE}}</span></p></div>
+        <div class="card"><p>“Grupo Olimpo delivered our refinery project on schedule with exceptional safety standards.”<br><span class="muted">— PEMEX Project Manager</span></p></div>
+        <div class="card"><p>“Their expertise in infrastructure projects helped us overcome complex engineering challenges.”<br><span class="muted">— CFE Engineering Director</span></p></div>
+        <div class="card"><p>“Working with Grupo Olimpo means partnering with professionals who understand both construction and business.”<br><span class="muted">— International Partner</span></p></div>
       </div>
     </div>
   </section>
@@ -315,10 +350,11 @@
           </div>
           <select required data-i18n-select="contact.type">
             <option value="" data-i18n="contact.type0">Project type</option>
-            <option data-i18n="m.infra">Infrastructure</option>
-            <option data-i18n="m.energy">Energy & Gas</option>
+            <option data-i18n="m.infra">Energy & Gas</option>
+            <option data-i18n="m.energy">Infrastructure</option>
             <option data-i18n="m.ind">Industrial</option>
             <option data-i18n="m.building">Building</option>
+            <option>Strategic Alliance</option>
           </select>
           <textarea rows="4" placeholder="Brief description, location, timeline" data-i18n-placeholder="contact.desc"></textarea>
           <button type="submit" data-i18n="contact.btn">Send</button>
@@ -326,9 +362,22 @@
       </div>
       <aside class="card">
         <h4 data-i18n="contact.asideH">Contact</h4>
-        <p class="muted">Tel: {{PHONE}} · Email: {{EMAIL}}</p>
-        <p class="muted" data-i18n="contact.addr">Offices: {{FULL_ADDRESS}}</p>
-        <div style="height:160px;border-radius:12px;background:#0a1428;border:1px solid var(--ring);display:flex;align-items:center;justify-content:center;color:#64748b;margin-top:6px" data-i18n="contact.map">Map (placeholder)</div>
+        <p class="muted">Tel: +1 52 272 10 61434 · +1 52 272 10 69660 · +1 52 10 69661</p>
+        <p class="muted">Email: contacto@grupoolimpo.com</p>
+        <p class="muted">Address: Avenida Horacio 1840 piso 2, Colonia Polanco I sección, CP 11510, delegación Miguel Hidálgo, CDMX</p>
+        <div style="height:160px;border-radius:12px;overflow:hidden;border:1px solid var(--ring);margin-top:6px">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.548649209103!2d-99.2043562!3d19.4333188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201f7e30b3a01%3A0x5dac5e0ea50fa5d6!2sAv.%20Horacio%201840%2C%20Polanco%20I%20Secc%2C%20Miguel%20Hidalgo%2C%2011510%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX%2C%20Mexico!5e0!3m2!1sen!2sus!4v1733784200000!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Grupo Olimpo Location"
+            aria-label="Map showing Grupo Olimpo office location">
+          </iframe>
+        </div>        
         <div style="display:flex;gap:10px;margin-top:14px">
           <a class="cta" href="#" data-i18n="contact.brochure">Download brochure</a>
           <a class="cta" style="background:#e5e7eb;color:#0b1220" href="#" data-i18n="contact.certs">View certifications</a>
@@ -339,7 +388,7 @@
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <small>© {2025} Grupo Olimpo · <span data-i18n="foot.tag">Engineering & Construction</span></small>
+      <small>© 2025 Grupo Olimpo · <span data-i18n="foot.tag">Engineering & Construction</span></small>
       <small><span data-i18n="foot.careers">Careers</span> · <a href="#" data-i18n="foot.cv">Submit CV</a></small>
     </div>
   </footer>
@@ -359,14 +408,15 @@
       en:{
         brand:"GRUPO OLIMPO",
         nav:{projects:"Projects",portfolio:"Portfolio",markets:"Markets",permits:"Permits & ESG",why:"Why Olimpo",quote:"Request a Quote"},
-        hero:{badge:"Over",badge2:"years building across",titleA:"Engineering & construction for",tInfra:"infrastructure",tEnergy:"energy",and:"and",tIndustrial:"industrial",titleB:"projects.",lead:"We deliver safely, on schedule and on budget, using modern methods (BIM/VDC, prefabrication, quality control) for reliable outcomes.",cta1:"Request a proposal",cta2:"View projects",cert:"✓ Certifications: {ISO_9001} {Safety}",cover:"✓ Coverage: {STATES/MARKETS}",kpi1h:"On-time delivery",kpi1t:"Average over {{YEARS_ANALYZED}} years.",kpi2h:"Safety first",kpi2t:"Site safety indicator.",kpi3h:"Capacity",kpi3t:"Delivered in {{PERIOD}}.",kpi4h:"Repeat clients",kpi4t:"Long-term partnerships."},
-        markets:{h:"Markets & Services",t:"EPC and CM projects in key industries."},
-        m:{infra:"Infrastructure",infrah:"Roads, bridges & water",infrat:"Planning, civil works, QA/QC.",energy:"Energy & Gas",energyh:"Refineries, pipelines, generation",energyt:"Foundations, structures, erection, testing.",ind:"Industrial",indh:"Plants & warehouses",indt:"Design–build, expansions, turnarounds.",building:"Building",buildingh:"Commercial & corporate",buildingt:"Interiors, fit-outs, finishes."},
-        proj:{h:"Featured projects",cta:"See full portfolio →",cap1:"High-resolution image – describe project, scope, and outcome.",cap2:"Add details and client name (with permission).",cap3:"Show complexity, safety, and schedule performance."},
+        hero:{badge:"Over",badge2:"years building across",titleA:"A Strategic Ally in",tInfra:"Construction",tEnergy:"Engineering",and:"&",tIndustrial:"industrial",titleB:"projects.",lead:"A prominent Mexican construction company established as a reference in the development of significant EPC projects across various sectors of the economy.",cta1:"Request a proposal",cta2:"Partnership Opportunities",cert:"✓ Annual Revenue: $25M USD",cover:"✓ Coverage: All Mexican Territory",kpi1h:"Years of Experience",kpi1t:"Building excellence since 2013",kpi2h:"Team Capacity",kpi2t:"Fixed staff + construction workers",kpi3h:"Annual Revenue",kpi3t:"Average yearly revenue in USD",kpi4h:"Major Clients",kpi4t:"National & international partners"},
+        markets:{h:"Markets & Services",t:"EPC and CM projects across key economic sectors"},
+        m:{infra:"Energy & Gas",infrah:"Refineries & Power Plants",infrat:"PEMEX refinery reconfiguration, cogeneration plants, CFE installations",energy:"Infrastructure",energyh:"Bridges, Roads & Highways",energyt:"Bridges, viaducts, docks, roads, and regional development projects",ind:"Industrial",indh:"Plants & Warehouses",indt:"Food, pharmaceutical, brewing, automotive, cement & steel plants",building:"Building",buildingh:"Commercial & Residential",buildingt:"Supermarkets, shopping plazas, corporate buildings, bus terminals"},
+        proj:{h:"Featured projects",cta:"See full portfolio →",cap1:"PEMEX refinery reconfiguration - Energy sector",cap2:"Major bridge construction - Infrastructure development",cap3:"Industrial plant construction - Manufacturing sector"},
+        partner:{h:"Strategic Alliances",t:"Expanding across Mexico and Latin America",cta:"Explore Partnership"},
         perm:{h:"Permitting, Environment & Logistics",t:"We help navigate Mexican regulations and supply chains.",env:"Environmental impact & compliance guidance"},
-        why:{h:"Why choose Olimpo",t:"Measurable results and modern practices",m1h:"Modern methods",m1t:"BIM/VDC, prefabrication, collaborative planning to reduce risk and rework.",m2h:"Safety governance",m2t:"Programs with training, site audits and prevention culture.",m3h:"Alliances & coverage",m3t:"Vetted suppliers and capabilities in {{STATES}} states."},
-        logos:{h:"Clients & Partners",t:"Logo placeholders"},
-        test:{h:"Testimonials",t:"Add 2–3 brief quotes from clients and employees."},
+        why:{h:"Why choose Olimpo",t:"Measurable results and modern practices",m1h:"EPC Expertise",m1t:"Full Engineering, Procurement, and Construction capabilities for turnkey projects.",m2h:"Multi-Sector Experience",m2t:"Proven track record across energy, infrastructure, industrial, and building sectors.",m3h:"Strategic Positioning",m3t:"Reference company in Mexico with expansion plans across Latin America."},
+        logos:{h:"Clients & Partners",t:"Trusted by industry leaders"},
+        test:{h:"Testimonials",t:"Client and partner experiences"},
         contact:{h:"Request a proposal",t:"Tell us about your project and a specialist will reach out.",name:"Full name",company:"Company",email:"Email",type:"Project type",type0:"Project type",desc:"Brief description, location, timeline",btn:"Send",asideH:"Contact",map:"Map (placeholder)",brochure:"Download brochure",certs:"View certifications",alert:"Thanks! This is a mockup; connect this form to your CRM or email."},
         foot:{tag:"Engineering & Construction",careers:"Careers",cv:"Submit CV"},
         port:{h:"Full Portfolio",back:"← Back to featured",search:"Search projects by title or summary",all:"All"}
@@ -374,14 +424,15 @@
       es:{
         brand:"GRUPO OLIMPO",
         nav:{projects:"Proyectos",portfolio:"Portafolio",markets:"Sectores",permits:"Permisos y ESG",why:"Por qué Olimpo",quote:"Solicitar cotización"},
-        hero:{badge:"Más de",badge2:"años construyendo en",titleA:"Ingeniería y construcción para",tInfra:"infraestructura",tEnergy:"energía",and:"y",tIndustrial:"industria",titleB:".",lead:"Entregamos con seguridad, en tiempo y en costo, usando métodos modernos (BIM/VDC, prefabricación, control de calidad) para resultados confiables.",cta1:"Pedir una propuesta",cta2:"Ver proyectos",cert:"✓ Certificaciones: {ISO_9001} {Seguridad}",cover:"✓ Cobertura: {ESTADOS/MERCADOS}",kpi1h:"Entregas a tiempo",kpi1t:"Promedio de {{YEARS_ANALYZED}} años.",kpi2h:"Seguridad primero",kpi2t:"Indicador de seguridad de obra.",kpi3h:"Capacidad",kpi3t:"Construidos en {{PERIOD}}.",kpi4h:"Clientes que vuelven",kpi4t:"Relaciones de largo plazo."},
-        markets:{h:"Sectores y Servicios",t:"Proyectos EPC y CM en industrias clave."},
-        m:{infra:"Infraestructura",infrah:"Carreteras, puentes y agua",infrat:"Planeación, obra civil, QA/QC.",energy:"Energía y Gas",energyh:"Refinerías, ductos, generación",energyt:"Cimentaciones, estructuras, montaje, pruebas.",ind:"Industrial",indh:"Plantas y naves",indt:"Diseño–construcción, ampliaciones, paros.",building:"Edificación",buildingh:"Comercial y corporativo",buildingt:"Interiores, adecuaciones, acabados."},
-        proj:{h:"Proyectos destacados",cta:"Ver todo el portafolio →",cap1:"Imagen en alta resolución – describir alcance y resultados.",cap2:"Agregar detalles y nombre del cliente (con permiso).",cap3:"Mostrar complejidad, seguridad y desempeño."},
+        hero:{badge:"Más de",badge2:"años construyendo en",titleA:"Un Aliado Estratégico en",tInfra:"Construcción",tEnergy:"Ingeniería",and:"y",tIndustrial:"industrial",titleB:".",lead:"Una empresa mexicana de construcción prominente establecida como referencia en el desarrollo de proyectos EPC significativos en varios sectores de la economía.",cta1:"Pedir una propuesta",cta2:"Oportunidades de Asociación",cert:"✓ Ingresos Anuales: $25M USD",cover:"✓ Cobertura: Todo el Territorio Mexicano",kpi1h:"Años de Experiencia",kpi1t:"Construyendo excelencia desde 2013",kpi2h:"Capacidad del Equipo",kpi2t:"Personal fijo + trabajadores de construcción",kpi3h:"Ingresos Anuales",kpi3t:"Ingresos promedio anuales en USD",kpi4h:"Clientes Principales",kpi4t:"Socios nacionales e internacionales"},
+        markets:{h:"Sectores y Servicios",t:"Proyectos EPC y CM en industrias clave de la economía"},
+        m:{infra:"Energía y Gas",infrah:"Refinerías y Plantas de Energía",infrat:"Reconfiguración de refinería PEMEX, plantas de cogeneración, instalaciones CFE",energy:"Infraestructura",energyh:"Puentes, Carreteras y Autopistas",energyt:"Puentes, viaductos, muelles, carreteras y proyectos de desarrollo regional",ind:"Industrial",indh:"Plantas y Naves",indt:"Alimentos, farmacéutica, cervecera, automotriz, plantas de cemento y acero",building:"Edificación",buildingh:"Comercial y Residencial",buildingt:"Supermercados, plazas comerciales, edificios corporativos, terminales de autobuses"},
+        proj:{h:"Proyectos destacados",cta:"Ver todo el portafolio →",cap1:"Reconfiguración de refinería PEMEX - Sector energía",cap2:"Construcción de puente mayor - Desarrollo de infraestructura",cap3:"Construcción de planta industrial - Sector manufacturero"},
+        partner:{h:"Alianzas Estratégicas",t:"Expansión en México y Latinoamérica",cta:"Explorar Asociación"},
         perm:{h:"Permisos, Medio Ambiente y Logística",t:"Acompañamos en normatividad y cadenas de suministro en México.",env:"Gestión de impacto ambiental y cumplimiento"},
-        why:{h:"Por qué elegir Olimpo",t:"Resultados medibles y prácticas modernas",m1h:"Metodologías modernas",m1t:"BIM/VDC, prefabricación y planeación colaborativa para reducir riesgos y retrabajos.",m2h:"Gobernanza de seguridad",m2t:"Programas con capacitación, auditorías y cultura de prevención.",m3h:"Alianzas y cobertura",m3t:"Proveedores homologados y capacidades en {{STATES}} estados."},
-        logos:{h:"Clientes y Aliados",t:"Espacio de logos"},
-        test:{h:"Testimonios",t:"Agregar 2–3 citas breves de clientes y colaboradores."},
+        why:{h:"Por qué elegir Olimpo",t:"Resultados medibles y prácticas modernas",m1h:"Experiencia EPC",m1t:"Capacidades completas de Ingeniería, Procura y Construcción para proyectos llave en mano.",m2h:"Experiencia Multi-Sector",m2t:"Historial comprobado en energía, infraestructura, industrial y edificación.",m3h:"Posicionamiento Estratégico",m3t:"Empresa de referencia en México con planes de expansión en Latinoamérica."},
+        logos:{h:"Clientes y Aliados",t:"Con la confianza de líderes de la industria"},
+        test:{h:"Testimonios",t:"Experiencias de clientes y socios"},
         contact:{h:"Solicita una propuesta",t:"Cuéntanos sobre tu proyecto y te contactaremos.",name:"Nombre completo",company:"Empresa",email:"Correo",type:"Tipo de proyecto",type0:"Tipo de proyecto",desc:"Breve descripción, ubicación, plazo",btn:"Enviar",asideH:"Contacto",map:"Mapa (placeholder)",brochure:"Descargar brochure",certs:"Ver certificaciones",alert:"Gracias. Esto es un mockup; conecte este formulario a su CRM o email."},
         foot:{tag:"Ingeniería y Construcción",careers:"Bolsa de trabajo",cv:"Enviar CV"},
         port:{h:"Portafolio Completo",back:"← Volver a destacados",search:"Buscar proyectos por título o resumen",all:"Todos"}
